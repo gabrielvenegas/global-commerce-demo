@@ -41,11 +41,12 @@ export const config: VendureConfig = {
         synchronize: false, // turn this off for production
         logging: false,
         database: 'd4g6ogdioh5gfm',
-        host: 'postgres://zvyemfvbjawixs:5117e92808395f63de09bca1f0cf10cf3f6864c5d2a2480efdfee9a94178c33c@ec2-34-231-42-166.compute-1.amazonaws.com:5432/d4g6ogdioh5gfm',
+        host: 'ec2-34-231-42-166.compute-1.amazonaws.com',
         port: 5432,
         username: 'zvyemfvbjawixs',
         password: '5117e92808395f63de09bca1f0cf10cf3f6864c5d2a2480efdfee9a94178c33c',
         migrations: [path.join(__dirname, '../migrations/*.ts')],
+        ssl: true
     },
     paymentOptions: {
         paymentMethodHandlers: [dummyPaymentHandler],

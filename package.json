@@ -5,11 +5,11 @@
   "scripts": {
     "run:server": "ts-node ./src/index.ts",
     "run:worker": "ts-node ./src/index-worker.ts",
-    "start": "concurrently yarn:run:*",
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' concurrently yarn:run:*",
     "build": "tsc",
-    "migration:generate": "ts-node migration generate",
-    "migration:run": "ts-node migration run",
-    "migration:revert": "ts-node migration revert"
+    "migration:generate": "NODE_TLS_REJECT_UNAUTHORIZED='0' ts-node migration generate",
+    "migration:run": "NODE_TLS_REJECT_UNAUTHORIZED='0' ts-node migration run",
+    "migration:revert": "NODE_TLS_REJECT_UNAUTHORIZED='0' ts-node migration revert"
   },
   "dependencies": {
     "@vendure/admin-ui-plugin": "1.6.5",
