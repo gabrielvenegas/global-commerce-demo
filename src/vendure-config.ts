@@ -28,10 +28,10 @@ export const config: VendureConfig = {
         shopApiDebug: true,// turn this off for production
     },
     authOptions: {
-        superadminCredentials: {
-            identifier: 'superadmin',
-            password: 'superadmin',
-        },
+        // superadminCredentials: {
+        //     identifier: 'superadmin',
+        //     password: 'superadmin',
+        // },
         cookieOptions: {
           secret: process.env.COOKIE_SECRET || 'cookie-secret',
         },

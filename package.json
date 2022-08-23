@@ -5,7 +5,8 @@
   "scripts": {
     "run:server": "ts-node ./src/index.ts",
     "run:worker": "ts-node ./src/index-worker.ts",
-    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' concurrently yarn:run:*",
+    "start:dev": "NODE_TLS_REJECT_UNAUTHORIZED='0' concurrently yarn:run:*",
+    "start": "yarn:run:*",
     "build": "tsc",
     "migration:generate": "NODE_TLS_REJECT_UNAUTHORIZED='0' ts-node migration generate",
     "migration:run": "NODE_TLS_REJECT_UNAUTHORIZED='0' ts-node migration run",
